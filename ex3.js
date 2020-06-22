@@ -36,7 +36,7 @@ or have the word 'by' in their title. */
 async function getcourse2(){
     let coursedata2 = await Course
     .find ({isPublished:"true"  })
-    .or([{price:15}, {name: /.*"by"*./}])
+    .or([{price:{$gte:15}}, {name: /.*"by"*./}])
     .select("name author -_id isPublished tags price");
     console.log("EXERCISE 3");
     console.log(coursedata2);
