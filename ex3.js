@@ -41,4 +41,4 @@ async function getcourse2(){
     console.log("EXERCISE 3");
     console.log(coursedata2);
 }
-getcourse2();
+getcourse2(); 
